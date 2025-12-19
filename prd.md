@@ -8,8 +8,15 @@ Recent estimates suggest Telegram has around 1 billion monthly active users glob
 
 Recent reports from RedBus indicate that over 6 crore (60 million) bus tickets were booked on its platform in 2023, which corresponds to roughly 160,000–170,000 tickets per day on average (a derived estimate from annual volume, not a directly reported daily figure). Industry analyses suggest RedBus accounts for around 75% of the intercity online bus OTA market in India by gross booking value, implying that total online intercity bus bookings across major OTAs are roughly one‑third higher than RedBus alone, with the remaining volume spread across competitors such as AbhiBus, Paytm Bus, ixigo, and others.
 
+Intercity bus travelers in India often discover and coordinate trips within Telegram (friends, work groups, travel planning), but completing a booking requires context-switching into standalone apps or clunky mobile web flows. This creates friction, drop-offs, and lost bookings for platforms like RedBus.
+
+We believe that embedding a lightweight yet full-funnel RedBus booking experience directly inside Telegram, via the WebApp platform, can convert high-intent conversations into completed bookings with lower acquisition and re-engagement costs.
+
 ## User persona
-**Target demographic:** 18-35 year olds using Telegram on a daily basis (this demographic represents more than 50% of all Indian Telegram users).
+**Target demographic:** 18-35 year olds using Telegram on a daily basis (this demographic represents more than 50% of all Indian Telegram users). These users typically exhibit the following traits:
+- Already use Telegram daily for work and social groups
+- Take intercity buses 3-6 times a year
+- Prefer digital payments (GPay) over cash and are comfortable with mobile interfaces
 
 ### Pain points and opportunities
 - The user has to install apps like RedBus to be able to make a bus booking.
@@ -20,14 +27,19 @@ Recent reports from RedBus indicate that over 6 crore (60 million) bus tickets w
 ## Solution space
 **Proposed solution:** Build a Telegram bot which leverages the extensive mini-app platform offered by Telegram (https://core.telegram.org/bots/webapps)
 
-### User stories (unprioritized for now)
-- As a Telegram user, I should be able to access the Telegram bot through a hyperlink which could be present anywhere on the web so that I could be redirected to the Telegram app from anywhere and get started with my user journey.
-- As a Telegram user, I should be able to use a '/start' command or something similar that allows me to get started with the mini-app
-- As a Telegram user, I should have an easy-to-use interactive interface which will allow me to navigate the UI, leveraging all the flexibility that the mini-app interface could offer.
-- As a Telegram user, I should be able to search for all the available buses that are present on the schedule that I enter between the source and the destination.
-- As a Telegram user, I should be able to make a choice and check availability of bus seats as I book.
-- As a Telegram user, I should be able to get a price estimate of the bus that I'm booking.
-- As a Telegram user, I should be able to make a payment via a payment gateway like GPay or Apple Pay.
+### User stories
+Prioritized in the decreasing order of priority. MVP (must-have) requirements up till (3), good-to-have requirements till (7)
+
+1. As a Telegram user, I should have an easy-to-use interactive interface which will allow me to navigate the UI, leveraging all the flexibility that the mini-app interface could offer.
+2. As a Telegram user, I should be able to search for all the available buses that are present on the schedule that I enter between the source and the destination.
+3. As a Telegram user, I should be able to make a choice and check availability of bus seats fetched in real time.
+4. As a Telegram user, I should be able to get a price estimate of the bus that I'm booking.
+5. As a Telegram user, I should be able to access the Telegram bot through a deeplink which could be present anywhere on the web so that I could be redirected to the Telegram app and avoid the need for installing an app.
+6. As a Telegram user, I should be able to make a payment via a payment gateway like GPay or Apple Pay.
+
+### Key user flows (v0)
+1. New user booking flow
+2. Search functionality for buses
 
 ## Metrics to optimize for
 - DAU on the Telegram bot
