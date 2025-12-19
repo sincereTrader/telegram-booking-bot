@@ -31,7 +31,3 @@ Each workspace can be run independently:
 - `npm run dev --workspace=backend` - Run API server
 - `npm run dev --workspace=frontend` - Run frontend dev server
 
-## License
-
-Private - RedBus Internal Project
-
